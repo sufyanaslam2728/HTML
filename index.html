@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" container="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./index.js" defer></script>
+    <title>FISCUS-ON2</title>
+  </head>
+  <body>
+    <!-- ......header section.... -->
+
+    <header>
+      <div class="container">
+        <div class="header-container">
+          <!-- profile-section -->
+
+          <div class="header-container-profile-bar">
+            <div class="header-container-profile-bar-logo-conatiner">
+              <div
+                class="header-container-profile-bar-conatiner-logo-container"
+              >
+                <img
+                  src="./asserts//images/logo (1).webp"
+                  alt="logo"
+                  class="logo"
+                />
+              </div>
+              <button
+                class="header-container-profile-bar-conatiner-button-icon show-close-side-bar-button"
+                onclick="hideSideBar()"
+              >
+                <i class="fa-solid fa-angle-left icon"></i>
+              </button>
+              <button
+                onclick="showSideBar()"
+                class="header-container-profile-bar-conatiner-button-icon display-side-bar-button"
+              >
+                <i class="fa-solid fa-angle-right icon"></i>
+              </button>
+            </div>
+            <div class="header-container-profile-bar-conatiner">
+              <div
+                class="header-container-profile-bar-conatiner-profile-container"
+              >
+                <img
+                  src="./asserts/images/blondeGirl.png"
+                  alt="blondeGirl"
+                  class="profile"
+                />
+              </div>
+              <div
+                class="header-container-profile-bar-conatiner-profile-content-container"
+              >
+                <span
+                  class="header-container-profile-bar-conatiner-profile-content-container-username"
+                  >김관리님</span
+                ><span
+                  class="header-container-profile-bar-conatiner-profile-content-container-designation"
+                  >대출관리팀</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- tool-bar-section -->
+
+          <div class="header-container-tool-bar">
+            <div class="header-container-tool-bar-icon-container">
+              <i class="fa-regular fa-bell tool-bar-icon"></i>
+            </div>
+            <div class="header-container-tool-bar-icon-container">
+              <i class="fa-solid fa-magnifying-glass magnifying-glass-icon"></i>
+              <select name="menuSearch" id="menu-search">
+                <option selected hidden value="메뉴 검색">메뉴 검색</option>
+                <option value="계기반">계기반</option>
+                <option value="대시보드/회원/관리">
+                  <대시보드/회원/관리/option>
+                </option>
+                <option value="대시보드/비즈니스/관리">
+                  대시보드/비즈니스/관리
+                </option>
+                <option value="대시보드/투자/관리">대시보드/투자/관리</option>
+              </select>
+            </div>
+            <div class="header-container-tool-bar-icon-container">
+              <i
+                class="tool-bar-icon fa-solid fa-arrow-up-right-from-square"
+              ></i>
+            </div>
+            <div class="header-container-tool-bar-icon-container">
+              <i class="tool-bar-icon fa-solid fa-gear"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ..........mainsection ........... -->
+
+    <main>
+      <div class="container">
+        <div class="main-container">
+          <div class="main-container-side-bar-container">
+            <ul class="main-container-side-bar-container-side-bar">
+              <li class="main-container-side-bar-container-side-bar-list-item">
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img src="./asserts/images/home.png" alt="home"
+                  /></span>
+                  <p>대시보드</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img src="./asserts//images/user.png" alt="user"
+                  /></span>
+                  <p>회원 관리</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img src="./asserts//images/briefcase.png" alt="briefcase"
+                  /></span>
+                  <p>영업 관리</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img src="./asserts//images/money-bag.png" alt="money-bag"
+                  /></span>
+                  <p>펀딩 관리</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img
+                      src="./asserts//images/combo-chart.png"
+                      alt="combo-chart"
+                  /></span>
+                  <p>투자 관리</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img src="./asserts//images/file.png" alt="file"
+                  /></span>
+                  <p>채권 관리</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img src="./asserts//images/banknotes.png" alt="banknotes"
+                  /></span>
+                  <p>지급 관리</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img src="./asserts//images/math.png" alt="math"
+                  /></span>
+                  <p>세무 관리</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img
+                      src="./asserts//images/synchronize.png"
+                      alt="synchronize"
+                  /></span>
+                  <p>변경내역/로그 조회</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link"
+                >
+                  <span class="link-icon-container"
+                    ><img
+                      src="./asserts//images/chat-bubble.png"
+                      alt="chat-bubble"
+                  /></span>
+                  <p>전시/게시판 관리</p>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="main-container-side-bar-container-side-bar-list-item-link select-icon-container"
+                >
+                  <span class="link-icon-container"
+                    ><img src="./asserts//images/spanner.png" alt="spanner"
+                  /></span>
+                  <select name="system-management" id="system-management">
+                    <option selected hidden value="시스템 관리">
+                      시스템 관리
+                    </option>
+                    <option value="메뉴 1">메뉴 1</option>
+                    <option value="메뉴 2">메뉴 2</option>
+                    <option value="메뉴 3">메뉴 3</option>
+                  </select>
+                  <div class="select-icon">
+                    <img
+                      src="./asserts//images/icons8-arrow-down-16.png"
+                      alt="arrow-down"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-container-content-container">
+            <!-- tabs-navigation-section -->
+
+            <section class="main-container-content-container-nav-section">
+              <h2 class="nav-section-heading">회원상세</h2>
+
+              <!-- navigation-tabs -->
+
+              <div class="navigation-tabs">
+                <button class="tab-button">기본정보 관리</button
+                ><button class="tab-button">투자유형 관리</button
+                ><button class="tab-button">입출금내역 조회</button
+                ><button class="tab-button">영업내역 조회</button
+                ><button class="tab-button">투자내역 조회</button
+                ><button class="tab-button">채권내역 조회</button
+                ><button class="tab-button">SMS 관리</button
+                ><button class="tab-button">상담내역 관리</button
+                ><button class="tab-button">1:1문의내역 조회</button>
+              </div>
+            </section>
+
+            <!-- profile-section -->
+
+            <section class="main-container-content-container-profile-section">
+              <div class="profile-section-header">
+                <h3 class="">회원정보</h3>
+                <div class="profile-section-header-options-container">
+                  <button
+                    class="profile-section-header-options-container-button"
+                  >
+                    임시비밀번호 발급</button
+                  ><button
+                    class="profile-section-header-options-container-button"
+                  >
+                    블랙리스트 등록</button
+                  ><button
+                    class="profile-section-header-options-container-button"
+                  >
+                    회원탈퇴
+                  </button>
+                </div>
+              </div>
+              <div class="section-details-container">
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>회원번호</p></div>
+                  <div class="detail-description"><p>ABC123</p></div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title">
+                    <p>투자회원</p>
+                    <div class="detail-title-subtitle-contaier">
+                      <div class="subtitle"><p>유형</p></div>
+                      <div class="subtitle"><p>GUID</p></div>
+                    </div>
+                  </div>
+                  <div class="detail-description multi-row-description">
+                    <p><span>일반개인</span></p>
+                    <p><sapn>qwerasdf1324</sapn></p>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title">
+                    <p>대출회원</p>
+                    <div class="detail-title-subtitle-contaier">
+                      <div class="subtitle"><p>유형</p></div>
+                      <div class="subtitle"><p>GUID</p></div>
+                    </div>
+                  </div>
+                  <div class="detail-description multi-row-description">
+                    <p><span>개인</span></p>
+                    <p><sapn>zxcasdqwe1234</sapn></p>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>유형</p></div>
+                  <div class="detail-description">
+                    <p>승인거부</p>
+                    <button class="detail-description-button">사유 확인</button>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>휴면상태</p></div>
+                  <div class="detail-description">
+                    <p>휴면 (2023-01-01 09:00:00)</p>
+                    <button class="detail-description-button">휴면 해제</button>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>블랙리스트여부</p></div>
+                  <div class="detail-description">
+                    <p>블랙리스트</p>
+                    <button class="detail-description-button">사유 확인</button>
+                    <button class="detail-description-button">
+                      블랙리스트 해제
+                    </button>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>회원명</p></div>
+                  <div class="detail-description">
+                    <p>김길동</p>
+                    <button class="detail-description-button">
+                      변경 이력 확인
+                    </button>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>생년월일</p></div>
+                  <div class="detail-description"><p>1988-01-02</p></div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>성별</p></div>
+                  <div class="detail-description"><p>남자</p></div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>이메일 ID</p></div>
+                  <div class="detail-description">
+                    <p>gildongkim@naver.com</p>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>휴대폰 번호</p></div>
+                  <div class="detail-description"><p>010-1234-5678</p></div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>전화번호</p></div>
+                  <div class="detail-description">
+                    <input type="text" readonly value="02-1234-5678" />
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>주소</p></div>
+                  <div class="detail-description">
+                    <button class="detail-description-button">주소검색</button>
+                    <input
+                      type="text"
+                      readonly
+                      disabled
+                      value="(01234) 서울특별시 강동구 천호대로 12길"
+                    />
+                    <input type="text" readonly value="상세주소" />
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>직업</p></div>
+                  <div class="detail-description"><p>직장인</p></div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>출금계좌</p></div>
+                  <div class="detail-description">
+                    <p>신한은행 123-45-678-90</p>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>예치금계좌</p></div>
+                  <div class="detail-description">
+                    <p>전북은행 012-33-22221</p>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>상환전용계좌</p></div>
+                  <div class="detail-description">
+                    <button class="detail-description-button">
+                      자세히 보기
+                    </button>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>마케팅수신동의</p></div>
+                  <div class="detail-description">
+                    <input
+                      type="checkbox"
+                      name="이메일"
+                      class="detail-description-radio-input"
+                    />
+                    <label for="이메일">이메일</label>
+                    <input
+                      type="checkbox"
+                      name="문자"
+                      class="detail-description-radio-input"
+                    />
+                    <label for="문자">문자</label>
+                    <button class="detail-description-button">
+                      동의 이력 확인
+                    </button>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>약관동의</p></div>
+                  <div class="detail-description">
+                    <p>전체 약관동의 완료</p>
+                    <button class="detail-description-button">
+                      동의 이력 확인ƒ
+                    </button>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>가입일시</p></div>
+                  <div class="detail-description">
+                    <p>2022-01-01 09:00:00</p>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>메모</p></div>
+                  <div class="detail-description text-area-variant">
+                    <textarea>
+악성민원으로 전화상담 시 주의 필요 1금융 대출 1건/연체없음 이내 소유 아파트로 대출 문의 1순위 하나은행 10억 대출 중 대출금리 15%로 협의중
+                    </textarea>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- memo-section -->
+
+            <section class="main-container-content-container-memo-section">
+              <div class="memo-section-header">
+                <h4 class="">메모</h4>
+              </div>
+              <div class="section-details-container">
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>법인명</p></div>
+                  <div class="detail-description"><p>㈜가나다법인</p></div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>사업자등록번호</p></div>
+                  <div class="detail-description">
+                    <p>ABC1111-222-333323</p>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>사업자전화번호</p></div>
+                  <div class="detail-description">
+                    <input type="text" readonly value="111-222-33338" />
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>사업자주소</p></div>
+                  <div class="detail-description memo-section-details">
+                    <button class="detail-description-button">주소검색</button>
+                    <input
+                      type="text"
+                      readonly
+                      disabled
+                      value="(01234) 서울특별시 강동구 천호대로 12길"
+                    />
+                    <input type="text" readonly value="상세주소" />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- history-section -->
+
+            <section class="main-container-content-container-memo-section">
+              <div class="history-section-header">
+                <h4 class="">저장이력</h4>
+              </div>
+              <div class="section-details-container">
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>최근저장일시</p></div>
+                  <div class="detail-description">
+                    <p>2022-01-01 09:00:00</p>
+                  </div>
+                </div>
+                <div class="section-details-container-row">
+                  <div class="detail-title"><p>관리자</p></div>
+                  <div class="detail-description"><p>김관리자</p></div>
+                </div>
+              </div>
+            </section>
+
+            <div class="submission-buttons">
+              <button class="primary-button">저장</button>
+              <button class="secondary-button">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+  </body>
+</html>
